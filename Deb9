@@ -159,7 +159,7 @@ END
 systemctl start openvpn@server
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
-cat > /home/vps/public_html/client.ovpn <<-END
+cat > /home/vps/public_html/jhunzkie.ovpn <<-END
 
 # Created by wang zki
 auth-user-pass
@@ -191,9 +191,9 @@ http-proxy-option CUSTOM-HEADER X-Forward-Host weixin.qq.cn
 http-proxy-option CUSTOM-HEADER Connection: Keep-Alive
 http-proxy-option CUSTOM-HEADER Proxy-Connection: keep-alive
 END
-echo '<ca>' >> /home/vps/public_html/client.ovpn
-cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
-echo '</ca>' >> /home/vps/public_html/client.ovpn
+echo '<ca>' >> /home/vps/public_html/jhunzkie.ovpn
+cat /etc/openvpn/ca.crt >> /home/vps/public_html/jhunzkie.ovpn
+echo '</ca>' >> /home/vps/public_html/jhunzkie.ovpn
 
 cat > /home/vps/public_html/OpenVPN-Stunnel.ovpn <<-END
 
